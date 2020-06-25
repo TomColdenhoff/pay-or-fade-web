@@ -1,0 +1,66 @@
+.sign-in-form
+  width: 400px
+  height: min-content
+  position: relative
+
+  form
+    button
+      -moz-transition: all .15s ease-in
+      -o-transition: all .15s ease-in
+      -webkit-transition: all .15s ease-in
+      transition: all .15s ease-in
+      width: 100%
+      height: 40px
+      background-color: var(--button-color)
+      border-radius: 10px
+      border: none
+      color: var(--button-text-color)
+      font-size: 1.3em
+      font-weight: bold
+
+    button:hover
+      border: none
+      background-color: var(--button-hover-color)
+      font-size: 1.4em
+
+    button:focus
+      outline: none
+      border: 2px solid var(--button-color)
+      font-size: 1.35em
+
+
+.form-group
+  padding: 0 15px 15px 15px
+  label
+    font-size: 1.2em
+    padding-bottom: 5px
+    display: block
+
+  input[type="text"], input[type="email"], input[type="password"]
+    -moz-transition: all .2s ease-in
+    -o-transition: all .2s ease-in
+    -webkit-transition: all .2s ease-in
+    transition: all .2s ease-in
+    display: block
+    width: 99%
+    height: 30px
+    padding: 0 0 0 2px
+    margin: 5px 0 0 0
+    border: none
+    border-bottom: 2px solid var(--divider-shadow-color)
+    font-size: 0.85em
+
+  input:focus
+    outline: none
+    border-color: var(--button-color)
+
+  span
+    font-size: 0.9em
+
+@media (max-width: 800px)
+  .sign-in-form
+    width: 95vw
+
+@media (max-height: 680px)
+  .sign-in-form
+    margin-bottom: 25px
