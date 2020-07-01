@@ -7,15 +7,17 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     status: "",
-    token: localStorage.getItem("token") || ""
+    token: localStorage.getItem("token") || "",
+    userId: localStorage.getItem("userId") || ""
   },
   mutations: {
     auth_request(state) {
       state.status = "loading";
     },
-    auth_success(state, token) {
+    auth_success(state, userData) {
       state.status = "success";
-      state.token = token;
+      state.token = userData.token;
+      state.userId = userData.userId;
     },
     auth_error(state) {
       state.status = "error";
@@ -35,10 +37,13 @@ export default new Vuex.Store({
           method: "POST"
         })
           .then(resp => {
-            const token = resp.data.token;
+            const token = `Bearer ${resp.data.token}`;
+            const userId = resp.data.userId;
             localStorage.setItem("token", token);
+            localStorage.setItem("userId", userId);
             axios.defaults.headers.common["Authorization"] = token;
-            commit("auth_success", token);
+            console.log(token);
+            commit("auth_success", { token, userId });
             resolve(resp);
           })
           .catch(err => {
@@ -59,7 +64,8 @@ export default new Vuex.Store({
   },
   getters: {
     isLoggedIn: state => !!state.token,
-    authStatus: state => state.status
+    authStatus: state => state.status,
+    userId: state => state.userId
   },
   modules: {}
 });

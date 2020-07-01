@@ -37,18 +37,22 @@
               Account
               <div id="account-dropdown" style="display: none">
                 <router-link to="#">My Account</router-link>
-                <router-link to="#">Projects</router-link>
-                <router-link to="/logout" @click.native="logout">Logout</router-link>
+                <router-link to="/sites">My Sites</router-link>
+                <router-link to="/logout" @click.native="logout">
+                  Logout
+                </router-link>
                 <div class="account-dropdown-shadow"></div>
               </div>
             </a>
             <router-link to="#" v-else>My Account</router-link>
           </li>
           <li v-if="isMobileView && isLoggedIn">
-            <router-link to="#">Projects</router-link>
+            <router-link to="/sites">My Sites</router-link>
           </li>
           <li v-if="isMobileView && isLoggedIn">
-            <router-link to="/logout" @click.native="logout">Logout</router-link>
+            <router-link to="/logout" @click.native="logout"
+              >Logout</router-link
+            >
           </li>
         </ul>
       </transition>
@@ -97,7 +101,6 @@ export default {
       document.getElementById("account-dropdown").style.display = "none";
     },
     logout() {
-      console.log("wtf");
       this.$store.dispatch("logout");
       this.$router.push("/");
     }

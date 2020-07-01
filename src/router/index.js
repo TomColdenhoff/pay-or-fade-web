@@ -4,6 +4,7 @@ import store from "../store/index";
 import Home from "../views/Home.vue";
 import Examples from "../views/Examples";
 import SignIn from "../views/SignIn";
+import Sites from "../views/Sites";
 
 Vue.use(VueRouter);
 
@@ -22,6 +23,14 @@ const routes = [
     path: "/examples",
     name: "Examples",
     component: Examples,
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: "/sites",
+    name: "My Sites",
+    component: Sites,
     meta: {
       requiresAuth: true
     }
