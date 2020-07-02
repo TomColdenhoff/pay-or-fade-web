@@ -87,7 +87,7 @@ export default {
 
       return new Promise((resolve, reject) => {
         axios({
-          url: "https://localhost:5001/api/user/register",
+          url: process.env.VUE_APP_BASE_URL + "api/user/register",
           data: data,
           method: "POST"
         })
