@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import store from "../store/index";
 import Home from "../views/Home.vue";
 import Examples from "../views/Examples";
+import Contact from "../views/Contact";
 import SignIn from "../views/SignIn";
 import Sites from "../views/Sites";
 
@@ -51,6 +52,21 @@ const routes = [
           name: "description",
           content:
             "See examples on how you should use PayOrFade for your websites."
+        }
+      ]
+    }
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: Contact,
+    meta: {
+      title: "Contact",
+      metaTags: [
+        {
+          name: "description",
+          content:
+            "Do you encounter problems, bugs or do you want to help improve PayOrFade? Contact us."
         }
       ]
     }
