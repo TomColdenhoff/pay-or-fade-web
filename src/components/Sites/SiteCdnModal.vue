@@ -8,8 +8,7 @@
         <code>payorfade payorfadeid_{{ siteId }}</code>
         <p>Place the following script near the end of your page.</p>
         <code
-          >&lt;script src="payorfadeservice.js"
-          type="text/javascript"&gt;&lt;/script&gt;</code
+          >&lt;script type="text/javascript" src="https://cdn.jsdelivr.net/gh/TomColdenhoff/pay-or-fade-web@1.0.0/public/payorfadeservice.js"&gt;&lt;/script&gt;</code
         >
       </div>
     </transition>
@@ -82,13 +81,14 @@ p {
 }
 
 code {
-  overflow: scroll;
+  overflow-x: scroll;
   display: block;
   background-color: var(--code-background-color);
   padding: 5px;
   border-radius: 5px;
   width: calc(100% - 40px);
   margin: 0 15px;
+    white-space: nowrap;
 }
 
 .fade-enter-active,
