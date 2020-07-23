@@ -36,7 +36,7 @@
             >
               Account
               <div id="account-dropdown" style="display: none">
-                <router-link to="#">My Account</router-link>
+                <router-link to="/account">My Account</router-link>
                 <router-link to="/sites">My Sites</router-link>
                 <router-link to="/logout" @click.native="logout">
                   Logout
@@ -44,7 +44,7 @@
                 <div class="account-dropdown-shadow"></div>
               </div>
             </a>
-            <router-link to="#" v-else>My Account</router-link>
+            <router-link to="/account" v-else>My Account</router-link>
           </li>
           <li v-if="isMobileView && isLoggedIn">
             <router-link to="/sites">My Sites</router-link>

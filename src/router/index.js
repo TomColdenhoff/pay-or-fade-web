@@ -6,6 +6,7 @@ import Examples from "../views/Examples";
 import Contact from "../views/Contact";
 import SignIn from "../views/SignIn";
 import Sites from "../views/Sites";
+import Account from "../views/Account";
 
 Vue.use(VueRouter);
 
@@ -45,7 +46,6 @@ const routes = [
     name: "Examples",
     component: Examples,
     meta: {
-      requiresAuth: true,
       title: "Examples",
       metaTags: [
         {
@@ -82,6 +82,21 @@ const routes = [
         {
           name: "description",
           content: "All the sites linked to your account."
+        }
+      ]
+    }
+  },
+  {
+    path: "/account",
+    name: "Account",
+    component: Account,
+    meta: {
+      requiresAuth: true,
+      title: "My Account",
+      metaTags: [
+        {
+          name: "description",
+          content: "Edit your account information here."
         }
       ]
     }

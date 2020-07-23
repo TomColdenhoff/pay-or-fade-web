@@ -4,8 +4,13 @@
       <div class="modal">
         <h2>CDN</h2>
         <i @click="triggerEndEvent" class="fas fa-times"></i>
-        <p>Copy the code below and paste it in your website.</p>
-        <code>{{ siteId }}</code>
+        <p>Add the following two classes to the element you want fade.</p>
+        <code>payorfade payorfadeid_{{ siteId }}</code>
+        <p>Place the following script near the end of your page.</p>
+        <code
+          >&lt;script src="payorfadeservice.js"
+          type="text/javascript"&gt;&lt;/script&gt;</code
+        >
       </div>
     </transition>
   </div>
@@ -88,7 +93,7 @@ code {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 2s;
+  transition: opacity 1s;
 }
 
 .fade-enter,

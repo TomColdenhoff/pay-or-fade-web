@@ -16,7 +16,7 @@ function fadeSite() {
     }
   }
 
-  fetch(`https://localhost:5001/api/fade/opacity/${id}`)
+  fetch(`http://localhost:5000/api/fade/opacity/${id}`)
     .then(response => response.json())
     .then(commits => {
       element.style.opacity = commits.opacity;
