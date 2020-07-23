@@ -16,7 +16,7 @@ function fadeSite() {
     }
   }
 
-  fetch(`http://localhost:5000/api/fade/opacity/${id}`)
+  fetch(`https://api.payorfade.com/api/fade/opacity/${id}`)
     .then(response => response.json())
     .then(commits => {
       element.style.opacity = commits.opacity;
