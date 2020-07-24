@@ -201,4 +201,26 @@ button {
   margin-left: 15px;
   width: 46%;
 }
+
+@media (max-width: 800px) {
+  p {
+    width: calc(99% - 20px);
+    padding: 10px;
+  }
+
+  .two-col-inputs {
+    flex-direction: column;
+    justify-content: normal;
+
+    .form-group {
+      width: calc(99% - 20px);
+      padding: 10px;
+    }
+  }
+
+  button {
+    width: calc(99% - 20px);
+    margin: 0 10px 10px 10px;
+  }
+}
 </style>
