@@ -4,11 +4,11 @@
       <section class="main-section">
         <h1>Pay or Fade</h1>
         <p>
-          Pay or Fade is the easy to use service that can help you with
-          non-paying clients. Pay or Fade provides an easy to use system with a
-          script provided through a cdn to get you started in no time! Visit the
+          PayOrFade is the easy to use service that can help you with
+          non-paying clients. Pay or Fade provides an easy to use method with a
+          script provided through a CDN to get you started in no time! Visit the
           <router-link to="/examples">examples</router-link>
-          page to discover how Pay or Fade can help you with non-paying clients.
+          page to discover how PayOrFade can help you with non-paying clients.
           Or create an account to get started.
         </p>
       </section>

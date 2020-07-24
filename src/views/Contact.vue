@@ -4,7 +4,7 @@
     <div class="main-section">
       <div class="content">
         <p>
-          PayOrFade started as a side project of Tom Coldenhoff, the main goal
+          PayOrFade started as a side project by Tom Coldenhoff, the main goal
           of PayOrFade is giving developers more leverage to make their clients
           pay.
           <br />
