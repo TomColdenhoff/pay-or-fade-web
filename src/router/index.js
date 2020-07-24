@@ -21,7 +21,7 @@ const routes = [
         {
           name: "description",
           content:
-            "Pay or Fade is the easy to use service that can help you with non-paying clients. Pay or Fade provides an easy to use system with a script provided through a cdn to get you started in no time! Visit the examples page to discover how Pay or Fade can help you with non-paying clients. Or create an account to get started."
+            "PayOrFade is the easy to use service that can help you with non-paying clients. Pay or Fade provides an easy to use method with a script provided through a CDN to get you started in no time! Visit the examples page to discover how PayOrFade can help you with non-paying clients. Or create an account to get started."
         }
       ]
     }
